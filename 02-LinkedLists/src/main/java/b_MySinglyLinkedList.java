@@ -86,7 +86,6 @@ public class b_MySinglyLinkedList {
     public int getKthFromLast(int k){
         b_Node ptr1 = head;
         b_Node ptr2 = head;
-        // 1 2 3 4 5 6 7 8 9
         for (int i = 0; i < k-1; i++) {
             ptr2 = ptr2.next;
             if(ptr2 == null)
@@ -98,5 +97,36 @@ public class b_MySinglyLinkedList {
             ptr2 = ptr2.next;
         }
         return ptr1.value;
+    }
+
+    public void removeKthFromlast(int k){
+        b_Node prevDelete = null;
+        b_Node ptr1 = head;
+        b_Node ptr2 = head;
+
+        for (int i = 0; i < k-1; i++) {
+            ptr2 = ptr2.next;
+            if (ptr2 == null) System.out.println("ptr2 is null");
+        }
+        while (ptr2.next != null){
+            prevDelete = ptr1;
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+
+        if(ptr1 == head){
+            head = ptr1.next;
+            ptr1.next = null;
+            size--;
+        } else {
+            prevDelete.next = ptr1.next;
+            ptr1.next = null;
+            size--;
+        }
+
+
+
+
+
     }
 }
