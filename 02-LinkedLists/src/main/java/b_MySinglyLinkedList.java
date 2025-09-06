@@ -82,4 +82,21 @@ public class b_MySinglyLinkedList {
         }
         return -1;
     }
+
+    public int getKthFromLast(int k){
+        b_Node ptr1 = head;
+        b_Node ptr2 = head;
+        // 1 2 3 4 5 6 7 8 9
+        for (int i = 0; i < k-1; i++) {
+            ptr2 = ptr2.next;
+            if(ptr2 == null)
+                return -1;
+        }
+
+        while(ptr2.next != null){
+            ptr1 = ptr1.next;
+            ptr2 = ptr2.next;
+        }
+        return ptr1.value;
+    }
 }
