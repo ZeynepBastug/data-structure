@@ -40,7 +40,33 @@ public class b_MySinglyLinkedList {
         System.out.println();
     }
 
-    void deleteNode(){
+    void deleteNode(int value){
+
+        if(isEmpty()) System.out.println("No Values with the value send!");
+
+        // first one
+        b_Node current = head;
+        b_Node prev = head;
+
+        while (current != null){  //if you find a match
+            if(current.value == value){ //if the item to be deleted is the head
+                if(current == head) {
+                    head = current.next;
+                    current.next = null; // will be available for garbage collection
+                } else if (current == tail) { // if the item to be deleted  in the tail
+                    tail = prev;
+                    prev.next = null;
+                }else{ // if the item to be deleted is in the middle
+                    prev.next = current.next;
+                    current.next = null;
+                }
+
+                size--; //decrease the size once
+            }
+            prev = current;
+            current = current.next;
+
+        }
 
     }
 

@@ -8,5 +8,8 @@ public class b_LinkedListApp {
 
         list1.printNode();
         System.out.println(list1.indexOf(4));
+
+        list1.deleteNode(3);
+        list1.printNode();
     }
 }
