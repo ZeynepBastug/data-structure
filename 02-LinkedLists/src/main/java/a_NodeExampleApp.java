@@ -5,7 +5,7 @@ public class a_NodeExampleApp {
         a_MyNode nodeB = new a_MyNode("Node B");
         a_MyNode nodeC = new a_MyNode("Node C");
 
-        System.out.println(nodeA);  // it will rint the address of the node! NOT the NAME!
+        System.out.println(nodeA);  // it will print the address of the node! NOT the NAME!
 
         nodeA.next = nodeB;
         nodeB.next = nodeC;

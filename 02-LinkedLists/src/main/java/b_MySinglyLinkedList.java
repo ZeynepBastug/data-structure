@@ -124,9 +124,36 @@ public class b_MySinglyLinkedList {
             size--;
         }
 
+    }
 
+    // Assignment 3 Remove Duplicated values from SLL
+    // O(n) time | O91) space - where n is the number of nodes in the Linked List
+    public void removeDuplicatesFromLinkedList (){
+        b_Node current = head;
+            while (current != null){
+                b_Node nextDistinctNode = current.next;
+                while(nextDistinctNode != null && current.value == nextDistinctNode.value){
+                    nextDistinctNode = nextDistinctNode.next;
+                }
+                current.next = nextDistinctNode;
+                current = nextDistinctNode;
+            }
+    }
 
+    public void reverse (){
+        if (isEmpty()) return;
 
+        b_Node prev = head;
+        b_Node current = head.next;
 
+        while (current != null ){
+            b_Node nextNode = current.next;
+            current.next = prev;
+            prev = current;
+            current = nextNode;
+        }
+        tail = head;
+        tail.next = null;
+        head = prev;
     }
 }
