@@ -2,7 +2,7 @@ public class b_LinkedListApp {
 
     public static void main(String[] args) {
         b_MySinglyLinkedList list1 = new b_MySinglyLinkedList();
-        for (int i = 0; i < 20; i++) {
+        for (int i = 0; i < 10; i++) {
             list1.add(i);
         }
 
