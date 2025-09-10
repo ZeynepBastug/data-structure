@@ -115,10 +115,24 @@ public class MyTree {
 
     public int countLeaves(Node root){
         if(root == null) return 0;
-
         if(isLeaf(root)) return 1;
 
         return countLeaves(root.leftChild) + countLeaves(root.rightChild);
+    }
+
+    public int findSumOfLeaves(Node root){
+        if(root== null) return 0;
+        if(isLeaf(root)) return root.value;
+
+        return findSumOfLeaves(root.leftChild) + findSumOfLeaves(root.rightChild);
+
+    }
+
+    public int height(Node root){
+        if(root==null)  return -1;
+        if(isLeaf(root)) return 0;
+
+        return 1+ Math.max(height(root.leftChild), height(root.rightChild));
     }
 
 }
