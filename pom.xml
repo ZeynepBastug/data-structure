@@ -16,6 +16,7 @@
         <module>04-Recursion</module>
         <module>05-Queues</module>
         <module>15-AlgorithmQuestions</module>
+        <module>06-Trees</module>
     </modules>
 
     <properties>
