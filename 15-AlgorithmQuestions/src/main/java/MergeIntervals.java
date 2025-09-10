@@ -32,8 +32,5 @@ public class MergeIntervals {
         }
         return mergedIntervals.toArray(new int[mergedIntervals.size()][]);
 
-
-
-
     }
 }
