@@ -18,6 +18,7 @@
         <module>15-AlgorithmQuestions</module>
         <module>06-Trees</module>
         <module>07-Heap</module>
+        <module>08-Search</module>
     </modules>
 
     <properties>
