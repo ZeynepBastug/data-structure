@@ -19,6 +19,7 @@
         <module>06-Trees</module>
         <module>07-Heap</module>
         <module>08-Search</module>
+        <module>09-Sorting</module>
     </modules>
 
     <properties>
